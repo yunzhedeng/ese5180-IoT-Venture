@@ -35,15 +35,15 @@ We would initially launch in the United States, focusing on university campuses,
 
 **How large is the market you’re targeting, in US dollars?**
 
-The United States had approximately 1.7 million software developer jobs in 2025, providing a starting point for estimating our initial customer base. Assuming 10% of that population would consider a dedicated macropad at a proposed $40 retail price, our initial target market would represent approximately $6.8 million in hardware purchases. This is an assumption-based, one-device-per-customer estimate—not measured demand or annual market revenue.
+The United States had approximately 1.7 million software developer jobs in 2025, providing a starting point for estimating our initial customer base. Assuming 10% of that population would consider a dedicated macropad at a proposed &#36;40 retail price, our initial target market would represent approximately &#36;6.8 million in hardware purchases. This is an assumption-based, one-device-per-customer estimate—not measured demand or annual market revenue.
 
 **How much of that market do you expect to capture, in US dollars?**
 
-Our first-year sales target would be 1,000 units at $40 each, generating $40,000 in revenue, or approximately 0.6% of our estimated target market. We would test this target through preorders, campus demonstrations, and small-business pilot sales before scaling production.
+Our first-year sales target would be 1,000 units at &#36;40 each, generating &#36;40,000 in revenue, or approximately 0.6% of our estimated target market. We would test this target through preorders, campus demonstrations, and small-business pilot sales before scaling production.
 
 **What competitors are already in the space?**
 
-Our closest competitor is OpenAI and Work Louder’s Codex Micro, listed at $230. Other alternatives include Elgato’s Stream Deck Neo, listed at $99.99 before promotions, and Adafruit’s MacroPad RP2040 kit. Our intended advantage would be a lower-cost, ready-to-use product with local configuration and clearly documented security controls.
+Our closest competitor is OpenAI and Work Louder’s Codex Micro, listed at &#36;230. Other alternatives include Elgato’s Stream Deck Neo, listed at &#36;99.99 before promotions, and Adafruit’s MacroPad RP2040 kit. Our intended advantage would be a lower-cost, ready-to-use product with local configuration and clearly documented security controls.
 
 ### Stakeholders
 
@@ -58,7 +58,13 @@ We have already spoken with the founder of YaoEdge about our product. He said he
 
 ### System-Level Diagrams
 
+![System-Level Diagram](image/README/image.png)
+
 ### Security Requirements Specification
+
+- **SecRS-01** - The console shall exchange task and approval data only with an authenticated computer companion application over an encrypted BLE connection.
+- **SecRS-02** - The nRF5340 shall verify firmware signatures before execution and reject unauthorized firmware.
+- **SecRS-03** - Sensitive actions shall require an external keypad press after the action is displayed. The companion application shall reject expired or reused approvals.
 
 ### Hardware Requirements Specification
 
